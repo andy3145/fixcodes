@@ -1,98 +1,875 @@
 [
   {
-    "brand": "samsung",
-    "appliance": "dryer",
-    "code": "de",
-    "title": "Samsung Dryer dE Error Code — Door Error",
-    "description": "dE indicates that the dryer is not detecting the door as properly closed. A blocked latch, misalignment, wiring fault, or failed door switch can trigger the code.",
-    "root_cause": "The control depends on the door-switch circuit to confirm that the door is closed before operation. If the expected switch state is not detected, the dryer prevents or interrupts operation and reports dE.",
-    "diagnostic_steps": [
-      "Open and close the dryer door firmly and check for clothing caught in the seal.",
-      "Inspect the latch and strike for damage or misalignment.",
-      "With power disconnected, inspect the door-switch wiring and connector.",
-      "Test the door switch for proper continuity and replace it if it fails."
+    "id": "whirlpool-washer-f5e2",
+    "brand": "Whirlpool",
+    "brandSlug": "whirlpool",
+    "appliance": "Washer",
+    "applianceSlug": "washer",
+    "code": "F5E2",
+    "title": "Whirlpool Washer F5E2 Error Code - Door Latch / Lid Lock Fault Fix",
+    "description": "Whirlpool washer code F5E2 indicates the main control board detects the door switch or lid lock assembly is not locking correctly.",
+    "symptoms": [
+      "Washer will not start cycle",
+      "Lid lock light flashes red or blinks",
+      "Door fails to lock during spin cycle"
     ],
-    "part_name": "Dryer Door Switch",
-    "part_number": "DC64-00828B"
+    "possibleCauses": [
+      "Damaged or broken lid latch strike",
+      "Faulty door lock switch assembly",
+      "Loose wiring harness connector",
+      "Failed main electronic control board"
+    ],
+    "solutions": [
+      "Disconnect power to the washer for 5 minutes to reset the control board.",
+      "Check lid latch mechanism for physical obstruction, debris, or broken plastic tabs.",
+      "Inspect wiring harness running between the lock switch and control unit for loose pins.",
+      "Test lid lock switch for electrical continuity using a multimeter; replace lock assembly if open circuit."
+    ],
+    "partName": "Lid Lock Switch Assembly",
+    "seoKeywords": [
+      "Whirlpool washer F5E2 error code",
+      "Whirlpool lid lock light flashing",
+      "how to fix F5E2 code Whirlpool",
+      "Whirlpool washer door lock replacement"
+    ]
   },
   {
-    "brand": "samsung",
-    "appliance": "dryer",
-    "code": "hc",
-    "title": "Samsung Dryer HC Error Code — High Temperature Heating Check",
-    "description": "HC indicates a high-temperature heating condition. Restricted airflow, a defective thermistor, heating-system fault, or another condition causing excessive heat can trigger the code.",
-    "root_cause": "The control monitors temperature through the dryer thermistor and compares the measured value with expected operating limits. Excessive temperature or an abnormal sensor signal causes the heating fault.",
-    "diagnostic_steps": [
-      "Clean the lint filter and inspect the entire exhaust path for restrictions.",
-      "Check the exterior vent hood and flexible duct for crushed or blocked sections.",
-      "Disconnect power and inspect the thermistor wiring.",
-      "If airflow is good, test the thermistor and heating components against the model's specifications."
+    "id": "whirlpool-washer-f1e1",
+    "brand": "Whirlpool",
+    "brandSlug": "whirlpool",
+    "appliance": "Washer",
+    "applianceSlug": "washer",
+    "code": "F1E1",
+    "title": "Whirlpool Washer F1E1 Error Code - Main Control Board Primary Failure",
+    "description": "Whirlpool washer code F1E1 signals a critical primary hardware failure on the main electronic control unit (CCU).",
+    "symptoms": [
+      "Washer powers off unexpectedly",
+      "Control panel unresponsive to buttons",
+      "Cycle freezes during operation"
     ],
-    "part_name": "Dryer Thermistor",
-    "part_number": "DC32-00007A"
+    "possibleCauses": [
+      "Power surge damage to control board",
+      "Burnt relay on main board",
+      "Corroded wiring terminals"
+    ],
+    "solutions": [
+      "Perform a hard reset by unplugging the unit for 10 minutes.",
+      "Inspect control board for burnt components, blown capacitors, or scorch marks.",
+      "Check incoming voltage at wall outlet to verify stable power supply.",
+      "Replace main electronic control board if error persists after hard reset."
+    ],
+    "partName": "Main Electronic Control Board",
+    "seoKeywords": [
+      "Whirlpool washer F1E1 error",
+      "Whirlpool control board failure",
+      "F1E1 washer code reset",
+      "Whirlpool main board repair"
+    ]
   },
   {
-    "brand": "maytag",
-    "appliance": "washer",
-    "code": "f5e2",
-    "title": "Maytag Washer F5E2 Error Code — Lid Lock Problem",
-    "description": "F5E2 indicates that the washer is having difficulty locking or confirming the lid-lock position. Obstructions, misalignment, wiring faults, or a failed lid-lock assembly can cause the code.",
-    "root_cause": "The control requires confirmation from the lid-lock circuit before continuing certain portions of the wash cycle. If the lock does not reach or maintain the expected state, the control records F5E2.",
-    "diagnostic_steps": [
-      "Remove any clothing or objects interfering with the lid.",
-      "Close the lid firmly and inspect the strike and lock opening for damage.",
-      "Disconnect power and inspect the lid-lock connector and harness.",
-      "If the mechanism does not reliably lock or unlock, test or replace the lid-lock assembly."
+    "id": "whirlpool-washer-f0e5",
+    "brand": "Whirlpool",
+    "brandSlug": "whirlpool",
+    "appliance": "Washer",
+    "applianceSlug": "washer",
+    "code": "F0E5",
+    "title": "Whirlpool Washer F0E5 Error Code - Off-Balance Load Detected",
+    "description": "F0E5 code indicates an off-balance wash load prevented the unit from reaching full spin speed.",
+    "symptoms": [
+      "Washer shakes violently",
+      "Spin cycle stops early",
+      "Clothes remain soaking wet"
     ],
-    "part_name": "Washer Lid Lock Assembly",
-    "part_number": "W11188327"
+    "possibleCauses": [
+      "Unevenly distributed laundry",
+      "Worn suspension rods",
+      "Unlevel washer feet"
+    ],
+    "solutions": [
+      "Pause cycle and manually redistribute heavy clothing or towels inside drum.",
+      "Use a spirit level to verify all four washer leveling feet are flat on floor.",
+      "Inspect all 4 suspension rods for broken springs or lost damping force.",
+      "Replace suspension dampening rod kit if drum bounces excessively when pressed down."
+    ],
+    "partName": "Washer Suspension Rod Kit",
+    "seoKeywords": [
+      "Whirlpool F0E5 code fix",
+      "Whirlpool washer off balance error",
+      "F0E5 clothes wet spin cycle",
+      "Whirlpool suspension rod replacement"
+    ]
   },
   {
-    "brand": "maytag",
-    "appliance": "washer",
-    "code": "f5e3",
-    "title": "Maytag Washer F5E3 Error Code — Lid Unlock Problem",
-    "description": "F5E3 indicates that the washer has detected a lid-lock or lid-unlock fault. A jammed mechanism, damaged strike, wiring issue, or failed lock assembly can cause the condition.",
-    "root_cause": "The control monitors the lid-lock position switch and expects the mechanism to move to the commanded state. Failure to reach that state within the expected period generates the error.",
-    "diagnostic_steps": [
-      "Stop the cycle and allow the basket to come to a complete stop.",
-      "Inspect the lid area and lock for clothing, debris, or mechanical damage.",
-      "Disconnect power and inspect the lock wiring and connector.",
-      "If the lock repeatedly fails to unlock, test or replace the lid-lock assembly."
+    "id": "whirlpool-washer-f8e1",
+    "brand": "Whirlpool",
+    "brandSlug": "whirlpool",
+    "appliance": "Washer",
+    "applianceSlug": "washer",
+    "code": "F8E1",
+    "title": "Whirlpool Washer F8E1 Error Code - Long Fill / No Water Inlet Fault",
+    "description": "F8E1 (LF) triggers when the washer fails to fill with water within the expected time limit.",
+    "symptoms": [
+      "Washer hums but no water enters drum",
+      "Cycle stalls at water fill step",
+      "LF code appears on display"
     ],
-    "part_name": "Washer Lid Lock Assembly",
-    "part_number": "W11188327"
+    "possibleCauses": [
+      "Clogged water inlet valve screen filters",
+      "Home water supply valve turned off",
+      "Kinked water supply hose",
+      "Defective water inlet valve solenoid"
+    ],
+    "solutions": [
+      "Ensure hot and cold home water valves are fully open.",
+      "Check inlet fill hoses for kinks or severe bends restricting flow.",
+      "Disconnect inlet hoses and clean mesh sediment filter screens inside water valve.",
+      "Test inlet valve solenoids with a multimeter and replace dual water inlet valve if faulty."
+    ],
+    "partName": "Water Inlet Valve Assembly",
+    "seoKeywords": [
+      "Whirlpool washer F8E1 error",
+      "Whirlpool LF code water fill",
+      "Whirlpool washer not filling water",
+      "F8E1 water inlet valve"
+    ]
   },
   {
-    "brand": "maytag",
-    "appliance": "washer",
-    "code": "f9e1",
-    "title": "Maytag Washer F9E1 Error Code — Long Drain",
-    "description": "F9E1 means the washer is taking too long to drain. A restricted drain hose, blocked pump, or failing drain pump is a common cause.",
-    "root_cause": "The control monitors the water-level response during the drain stage and expects the tub to empty within a defined time. If the level does not decrease sufficiently, F9E1 is recorded.",
-    "diagnostic_steps": [
-      "Inspect the drain hose for kinks, restrictions, or incorrect installation.",
-      "Check the household drain or standpipe for blockage.",
-      "Inspect the drain pump area for debris and confirm the impeller can move.",
-      "If the drain path is clear and the pump does not drain correctly, test or replace the pump."
+    "id": "whirlpool-dryer-e1-f3",
+    "brand": "Whirlpool",
+    "brandSlug": "whirlpool",
+    "appliance": "Dryer",
+    "applianceSlug": "dryer",
+    "code": "E1 F3",
+    "title": "Whirlpool Dryer E1 F3 Error Code - Thermistor Temperature Sensor Open Fault",
+    "description": "E1 F3 error indicates an open electrical circuit in the dryer thermistor temperature sensor.",
+    "symptoms": [
+      "Dryer stops heating midway",
+      "Dryer runs but clothes remain wet",
+      "E1 F3 code displays"
     ],
-    "part_name": "Washer Drain Pump Assembly",
-    "part_number": "W11399437"
+    "possibleCauses": [
+      "Blown thermal fuse",
+      "Defective temperature thermistor sensor",
+      "Lint buildup restricting airflow",
+      "Damaged wire harness"
+    ],
+    "solutions": [
+      "Clean lint filter and exhaust duct line completely to ensure unrestricted airflow.",
+      "Test thermal fuse on blower housing for continuity; replace if blown.",
+      "Measure thermistor resistance (approx 10k ohms at room temperature); replace thermistor if open circuit.",
+      "Inspect wiring harness connections between sensor and main board."
+    ],
+    "partName": "Dryer Temperature Thermistor Sensor",
+    "seoKeywords": [
+      "Whirlpool dryer E1 F3 error code",
+      "Whirlpool dryer thermistor testing",
+      "E1 F3 dryer fix",
+      "Whirlpool thermal fuse replacement"
+    ]
   },
   {
-    "brand": "maytag",
-    "appliance": "dryer",
-    "code": "f01",
-    "title": "Maytag Dryer F01 Error Code — Primary Control Failure",
-    "description": "F01 on applicable Maytag dryers indicates a primary electronic control fault. Power surges, damaged electronic components, or control-board communication problems can cause the error.",
-    "root_cause": "The main control is unable to complete its internal electronic functions or communicate correctly with the dryer system. The exact failure mechanism depends on the control-board design and model.",
-    "diagnostic_steps": [
-      "Disconnect the dryer from power for at least five minutes.",
-      "Restore power and verify whether the code returns immediately.",
-      "Inspect visible harness connectors for loose connections or damage.",
-      "If F01 returns, identify the exact model and match the control board to its model-specific parts diagram."
+    "id": "samsung-washer-4c",
+    "brand": "Samsung",
+    "brandSlug": "samsung",
+    "appliance": "Washer",
+    "applianceSlug": "washer",
+    "code": "4C",
+    "title": "Samsung Washer 4C / 4E Error Code - Water Supply Line Inflow Fault",
+    "description": "Samsung washer 4C (formerly 4E) indicates water is not entering the tub within the designated time frame.",
+    "symptoms": [
+      "Washer chime alerts mid-fill",
+      "Tub empty after fill step",
+      "4C displayed on panel"
     ],
-    "part_name": "Electronic Main Control Board",
-    "part_number": "W10111621"
+    "possibleCauses": [
+      "Clogged mesh filter in water inlet hose connections",
+      "Frozen or kinked supply lines",
+      "Defective water inlet solenoid valve",
+      "Faulty water pressure sensor"
+    ],
+    "solutions": [
+      "Turn off supply tap, remove fill hoses, and flush mesh filter screens under running water.",
+      "Inspect supply hoses for severe kinks or pinches behind the machine.",
+      "Check water pressure from wall valve directly into a bucket.",
+      "Replace water inlet valve assembly if screens are clean but water flow is blocked electrically."
+    ],
+    "partName": "Water Inlet Hose Mesh Filters & Valve",
+    "seoKeywords": [
+      "Samsung washer 4C error code fix",
+      "Samsung 4E code washer water supply",
+      "how to clear 4C error Samsung washer",
+      "Samsung washer filter mesh cleaning"
+    ]
+  },
+  {
+    "id": "samsung-washer-5c",
+    "brand": "Samsung",
+    "brandSlug": "samsung",
+    "appliance": "Washer",
+    "applianceSlug": "washer",
+    "code": "5C",
+    "title": "Samsung Washer 5C / 5E Error Code - Water Drain Failure",
+    "description": "Samsung 5C (or 5E) signals the washer failed to pump water out of the drum during drain cycle.",
+    "symptoms": [
+      "Tub remains filled with soapy water",
+      "Spin cycle will not activate",
+      "Humming sound from lower drain filter"
+    ],
+    "possibleCauses": [
+      "Clogged debris filter on drain pump",
+      "Kinked or clogged external drain hose",
+      "Objects trapped in drain impeller (coins, socks)",
+      "Defective drain pump motor"
+    ],
+    "solutions": [
+      "Open access door at bottom front, drain standing water manually, and clean debris filter tube.",
+      "Verify standpipe drain hose is positioned properly without kinks or tight bends.",
+      "Inspect drain pump impeller blades for trapped debris or coins.",
+      "Test drain pump motor for power and replace pump if motor hums without turning."
+    ],
+    "partName": "Drain Pump Motor Assembly",
+    "seoKeywords": [
+      "Samsung washer 5C error code",
+      "Samsung 5E code drain pump fix",
+      "clean Samsung washer debris filter",
+      "Samsung washer standing water"
+    ]
+  },
+  {
+    "id": "samsung-washer-ub",
+    "brand": "Samsung",
+    "brandSlug": "samsung",
+    "appliance": "Washer",
+    "applianceSlug": "washer",
+    "code": "UB",
+    "title": "Samsung Washer UB / UE Error Code - Unbalanced Load Protection",
+    "description": "UB (Unbalanced) or UE code triggers when load distribution prevents safe high-speed spin.",
+    "symptoms": [
+      "Washer attempts spin then slows down repeatedly",
+      "Thumping noise inside drum",
+      "UB code appears on control display"
+    ],
+    "possibleCauses": [
+      "Single bulky item (blanket/rug) caught on one side",
+      "Unlevel machine chassis",
+      "Worn damper suspension rods"
+    ],
+    "solutions": [
+      "Open door, untangle laundry, and evenly space heavy garments around drum.",
+      "Adjust leveling feet beneath cabinet using a level tool until fully stable.",
+      "Check drum bounce by pressing down from top; if drum swings loosely, replace 4 suspension rods."
+    ],
+    "partName": "Suspension Damper Rod Set",
+    "seoKeywords": [
+      "Samsung washer UB code fix",
+      "Samsung UE unbalance error",
+      "Samsung washer thumping noise spin cycle",
+      "replace Samsung suspension rods"
+    ]
+  },
+  {
+    "id": "samsung-fridge-22e",
+    "brand": "Samsung",
+    "brandSlug": "samsung",
+    "appliance": "Refrigerator",
+    "applianceSlug": "refrigerator",
+    "code": "22E",
+    "title": "Samsung Refrigerator 22E Error Code - Evaporator Fan Motor Circuit Failure",
+    "description": "Samsung 22E indicates the main board detects no feedback signal from the fresh food evaporator fan motor.",
+    "symptoms": [
+      "Fridge compartment warm while freezer cold",
+      "Whirring or grinding noise behind rear panel",
+      "22E error on digital display"
+    ],
+    "possibleCauses": [
+      "Frost buildup blocking fan blade rotation",
+      "Defective evaporator fan motor",
+      "Defrost system heater failure",
+      "Damaged wiring connector"
+    ],
+    "solutions": [
+      "Perform a full 24-hour manual defrost to clear ice accumulation behind food compartment panel.",
+      "Remove back internal duct wall and check fan blade for obstruction or motor stiffness.",
+      "Test fan motor harness for proper DC voltage signal from main board.",
+      "Replace fresh food evaporator fan motor assembly."
+    ],
+    "partName": "Evaporator Fan Motor",
+    "seoKeywords": [
+      "Samsung refrigerator 22E error code",
+      "Samsung fridge warm freezer cold 22E",
+      "Samsung evaporator fan replacement",
+      "22E code Samsung defrost ice buildup"
+    ]
+  },
+  {
+    "id": "samsung-fridge-33e",
+    "brand": "Samsung",
+    "brandSlug": "samsung",
+    "appliance": "Refrigerator",
+    "applianceSlug": "refrigerator",
+    "code": "33E",
+    "title": "Samsung Refrigerator 33E Error Code - Ice Pipe Heater Line Fault",
+    "description": "33E code signifies an open or short circuit in the ice maker water fill tube heater element.",
+    "symptoms": [
+      "Ice maker stops making ice",
+      "Water fill pipe behind ice room frozen solid",
+      "33E code displays"
+    ],
+    "possibleCauses": [
+      "Blown ice pipe heater circuit",
+      "Ice room door seal leak admitting moist air",
+      "Damaged wiring harness"
+    ],
+    "solutions": [
+      "Thaw frozen water supply line entering ice room using warm air or manual defrost.",
+      "Inspect ice room gaskets for tears allowing warm air intrusion.",
+      "Measure resistance of ice pipe heater circuit with multimeter.",
+      "Replace ice fill tube heater line or ice maker assembly."
+    ],
+    "partName": "Ice Room Water Pipe Heater Assembly",
+    "seoKeywords": [
+      "Samsung fridge 33E error code",
+      "Samsung ice maker frozen fill pipe",
+      "33E code fix Samsung refrigerator",
+      "Samsung ice pipe heater replacement"
+    ]
+  },
+  {
+    "id": "lg-washer-oe",
+    "brand": "LG",
+    "brandSlug": "lg",
+    "appliance": "Washer",
+    "applianceSlug": "washer",
+    "code": "OE",
+    "title": "LG Washer OE Error Code - Water Drain Outlet Obstruction / Pump Failure",
+    "description": "LG washer OE error indicates the machine failed to evacuate water within 13 minutes.",
+    "symptoms": [
+      "Standing water inside tub",
+      "OE code flashes with audible alarm",
+      "Washer stops prior to spin cycle"
+    ],
+    "possibleCauses": [
+      "Clogged drain pump filter screen",
+      "Kinked drain hose behind unit",
+      "Defective drain pump motor",
+      "Faulty water level pressure sensor"
+    ],
+    "solutions": [
+      "Unclip small drain hose at front lower door panel, drain water into bucket, and unscrew filter plug to clean debris.",
+      "Ensure drain hose height is correct and line is free of bends.",
+      "Listen for drain pump motor sound; if motor hums without spinning or remains silent, replace pump assembly."
+    ],
+    "partName": "Drain Pump Filter & Motor Assembly",
+    "seoKeywords": [
+      "LG washer OE error code fix",
+      "how to clear OE code LG washer",
+      "LG front load washer not draining",
+      "clean LG drain pump filter"
+    ]
+  },
+  {
+    "id": "lg-washer-ie",
+    "brand": "LG",
+    "brandSlug": "lg",
+    "appliance": "Washer",
+    "applianceSlug": "washer",
+    "code": "IE",
+    "title": "LG Washer IE Error Code - Water Inlet Timeout Fault",
+    "description": "LG IE error triggers when water level fails to reach appropriate threshold within allowed fill time.",
+    "symptoms": [
+      "No water entering tub",
+      "Low water flow during fill cycle",
+      "IE code displayed on screen"
+    ],
+    "possibleCauses": [
+      "Home water valves closed",
+      "Clogged inlet valve filter screens",
+      "Frozen inlet supply lines",
+      "Defective water inlet solenoid valve"
+    ],
+    "solutions": [
+      "Verify home hot and cold water taps are turned fully counterclockwise.",
+      "Unscrew fill hoses from back of washer and clean stainless steel filter screens with a brush.",
+      "Inspect hoses for kinks or blockages.",
+      "Replace dual inlet valve if screens are clear and home water pressure is normal."
+    ],
+    "partName": "Water Inlet Valve Assembly",
+    "seoKeywords": [
+      "LG washer IE error code",
+      "LG washer IE code fix water fill",
+      "clean LG inlet filter mesh",
+      "LG washer no water flow"
+    ]
+  },
+  {
+    "id": "lg-washer-ue",
+    "brand": "LG",
+    "brandSlug": "lg",
+    "appliance": "Washer",
+    "applianceSlug": "washer",
+    "code": "UE",
+    "title": "LG Washer UE / uE Error Code - Unbalanced Load Balance Correction",
+    "description": "UE error indicates an imbalanced load. Lowercase 'uE' means machine is attempting auto-correction; uppercase 'UE' requires manual intervention.",
+    "symptoms": [
+      "Spin cycle fails to reach max speed",
+      "Washer attempts re-fill to balance load",
+      "Thumping noise during spin"
+    ],
+    "possibleCauses": [
+      "Mixed heavy and light items (towels with shirts)",
+      "Unlevel machine base",
+      "Worn suspension dampers or tub springs"
+    ],
+    "solutions": [
+      "Pause cycle and re-arrange laundry evenly inside tub.",
+      "Verify all 4 leveling feet rest firmly on floor surface and lock nuts are tightened.",
+      "Inspect suspension dampeners for fluid leakage or loss of resistance."
+    ],
+    "partName": "Tub Suspension Shock Absorber",
+    "seoKeywords": [
+      "LG washer UE error code fix",
+      "difference between uE and UE LG washer",
+      "LG washer unbalanced load spin",
+      "LG shock absorber replacement"
+    ]
+  },
+  {
+    "id": "lg-fridge-er-ff",
+    "brand": "LG",
+    "brandSlug": "lg",
+    "appliance": "Refrigerator",
+    "applianceSlug": "refrigerator",
+    "code": "Er FF",
+    "title": "LG Refrigerator Er FF Error Code - Freezer Fan Motor Failure",
+    "description": "Er FF code signals a failure in the freezer evaporator fan motor circuit or ice buildup blocking fan operation.",
+    "symptoms": [
+      "Freezer warming up",
+      "Frost buildup on back interior panel",
+      "No air blowing from vents"
+    ],
+    "possibleCauses": [
+      "Defective freezer fan motor",
+      "Frost accumulation jamming fan blades",
+      "Defrost system failure (heater or bi-metal)",
+      "Control board relay fault"
+    ],
+    "solutions": [
+      "Perform full manual defrost to clear frozen frost around fan shroud.",
+      "Remove freezer back cover and check fan rotation by hand.",
+      "Measure voltage supply at fan harness connector during cooling call.",
+      "Replace freezer evaporator fan motor if power is present but blade refuses to spin."
+    ],
+    "partName": "Freezer Evaporator Fan Motor",
+    "seoKeywords": [
+      "LG refrigerator Er FF error code",
+      "LG fridge Er FF code fix",
+      "LG freezer fan motor replacement",
+      "Er FF frost buildup LG fridge"
+    ]
+  },
+  {
+    "id": "lg-dryer-d80",
+    "brand": "LG",
+    "brandSlug": "lg",
+    "appliance": "Dryer",
+    "applianceSlug": "dryer",
+    "code": "d80",
+    "title": "LG Dryer d80 / d90 / d95 Error Code - Exhaust Duct Blockage Alert",
+    "description": "d80, d90, or d95 indicates 80%, 90%, or 95% airflow restriction in the home exhaust vent system.",
+    "symptoms": [
+      "Dryer shuts down early",
+      "Clothes hot to touch but wet",
+      "Extremely long drying cycles"
+    ],
+    "possibleCauses": [
+      "Lint accumulation inside wall duct",
+      "Crushed metal vent pipe behind unit",
+      "Exterior wall hood flap stuck closed"
+    ],
+    "solutions": [
+      "Disconnect exhaust duct pipe from rear of dryer and clean wall duct using vent cleaning brush.",
+      "Verify exterior exhaust hood flap opens freely when dryer runs.",
+      "Replace flexible foil ducts with rigid or semi-rigid aluminum ductwork.",
+      "Clean dryer internal lint trap housing thoroughly."
+    ],
+    "partName": "Dryer Lint Vent Cleaning Kit & Hose",
+    "seoKeywords": [
+      "LG dryer d80 error code fix",
+      "LG dryer d90 vent blocked",
+      "how to clear d80 code LG dryer",
+      "LG dryer exhaust duct cleaning"
+    ]
+  },
+  {
+    "id": "ge-washer-e22",
+    "brand": "GE",
+    "brandSlug": "ge",
+    "appliance": "Washer",
+    "applianceSlug": "washer",
+    "code": "E22",
+    "title": "GE Washer E22 Error Code - Water Fill Timeout",
+    "description": "GE washer E22 code indicates water fill rate was too slow or failed to reach level sensor target in allotted time.",
+    "symptoms": [
+      "Washer fill stops prematurely",
+      "E22 flashes on display",
+      "Low water inside drum"
+    ],
+    "possibleCauses": [
+      "Home supply valves closed",
+      "Clogged inlet screens",
+      "Faulty water inlet valve solenoid",
+      "Pressure switch tube pinched"
+    ],
+    "solutions": [
+      "Confirm home water shutoff valves are turned completely open.",
+      "Clean mesh filter screens located at water inlet valve connections.",
+      "Inspect pressure switch air tube for kinks, water blockages, or cuts.",
+      "Replace dual water valve assembly if electrical solenoids fail continuity tests."
+    ],
+    "partName": "Water Inlet Valve Assembly",
+    "seoKeywords": [
+      "GE washer E22 error code",
+      "GE washer E22 code fix",
+      "GE front load washer fill failure",
+      "clean GE washer inlet filter"
+    ]
+  },
+  {
+    "id": "ge-washer-e30",
+    "brand": "GE",
+    "brandSlug": "ge",
+    "appliance": "Washer",
+    "applianceSlug": "washer",
+    "code": "E30",
+    "title": "GE Washer E30 Error Code - Drain Pump Obstruction / Drain Timeout",
+    "description": "E30 code indicates GE washer failed to drain water completely within the pre-set drain window.",
+    "symptoms": [
+      "Water left in wash drum",
+      "Door remains locked with water inside",
+      "E30 code displayed"
+    ],
+    "possibleCauses": [
+      "Blocked coin trap / drain filter",
+      "Clogged house drain pipe",
+      "Failed drain pump motor",
+      "Pressure sensor fault"
+    ],
+    "solutions": [
+      "Remove lower front pump access door and clean drain filter trap.",
+      "Verify drain hose is elevated correctly and free of kinks.",
+      "Test drain pump motor winding resistance using a multimeter.",
+      "Replace drain pump assembly if motor fails to operate when power is applied."
+    ],
+    "partName": "Drain Pump & Filter Assembly",
+    "seoKeywords": [
+      "GE washer E30 error code fix",
+      "GE washer not draining E30",
+      "GE washer clean coin trap",
+      "GE drain pump replacement"
+    ]
+  },
+  {
+    "id": "ge-dishwasher-h2o",
+    "brand": "GE",
+    "brandSlug": "ge",
+    "appliance": "Dishwasher",
+    "applianceSlug": "dishwasher",
+    "code": "H2O",
+    "title": "GE Dishwasher H2O Error Code - Low Water Level Detected",
+    "description": "H2O code indicates insufficient water entered the dishwasher sump during the wash fill cycle.",
+    "symptoms": [
+      "Dishwasher wash pump surges/gargles",
+      "Dishes remain dirty",
+      "H2O code shown on digital counter"
+    ],
+    "possibleCauses": [
+      "Undersized water inlet pressure",
+      "Clogged inlet valve filter",
+      "Defective water inlet valve",
+      "Faulty flood switch / float switch"
+    ],
+    "solutions": [
+      "Verify under-sink water supply valve is fully open.",
+      "Inspect overfill float stem inside tub floor to ensure it moves up and down freely.",
+      "Clean sediment from water inlet valve filter screen.",
+      "Replace water inlet valve if solenoid is defective or valve fails to open."
+    ],
+    "partName": "Dishwasher Water Inlet Valve",
+    "seoKeywords": [
+      "GE dishwasher H2O error code",
+      "GE dishwasher low water error H2O",
+      "GE dishwasher float switch test",
+      "GE dishwasher inlet valve replacement"
+    ]
+  },
+  {
+    "id": "bosch-dishwasher-e15",
+    "brand": "Bosch",
+    "brandSlug": "bosch",
+    "appliance": "Dishwasher",
+    "applianceSlug": "dishwasher",
+    "code": "E15",
+    "title": "Bosch Dishwasher E15 Error Code - Water Protection / Leak In Base Pan",
+    "description": "E15 triggers when water collects in the bottom safety pan, activating the microswitch float sensor.",
+    "symptoms": [
+      "Dishwasher pump runs continuously with door open",
+      "Tap symbol flashes",
+      "E15 displayed on panel"
+    ],
+    "possibleCauses": [
+      "Excessive suds from non-HE detergent",
+      "Leaking door gasket",
+      "Loose sump tub screws",
+      "Hole in water line or drain pump seal"
+    ],
+    "solutions": [
+      "Unplug unit, tilt dishwasher forward at 45-degree angle to drain trapped water from lower pan.",
+      "Tighten sump tub mounting screws located inside floor of dishwasher.",
+      "Inspect lower door seal and side gaskets for tears or misalignment.",
+      "Locate and repair source of water drip before restarting cycle."
+    ],
+    "partName": "Dishwasher Door Gasket / Tub Seal Kit",
+    "seoKeywords": [
+      "Bosch dishwasher E15 error code fix",
+      "Bosch E15 tap symbol flashing",
+      "tilt Bosch dishwasher E15 reset",
+      "Bosch dishwasher base pan leak"
+    ]
+  },
+  {
+    "id": "bosch-dishwasher-e24",
+    "brand": "Bosch",
+    "brandSlug": "bosch",
+    "appliance": "Dishwasher",
+    "applianceSlug": "dishwasher",
+    "code": "E24",
+    "title": "Bosch Dishwasher E24 Error Code - Drain Flow Restriction Fault",
+    "description": "E24 signals that the dishwasher is unable to drain water proper during the initial cycle drain check.",
+    "symptoms": [
+      "Standing water in bottom filter cup",
+      "E24 code displays shortly after starting cycle",
+      "Drain pump humming sound"
+    ],
+    "possibleCauses": [
+      "Garbage disposal knockout plug not removed",
+      "Clogged internal micro-filter",
+      "Blocked drain hose air gap",
+      "Impeded drain pump impeller"
+    ],
+    "solutions": [
+      "Remove coarse and fine stainless steel filters from tub floor and wash under hot water.",
+      "Check garbage disposal entry port for obstruction or unremoved plastic knockout plug.",
+      "Remove white plastic drain pump cover inside sump and check impeller for seed or bone blockage.",
+      "Verify drain hose is free of kinks and elevated in high loop."
+    ],
+    "partName": "Dishwasher Micro Filter Assembly",
+    "seoKeywords": [
+      "Bosch dishwasher E24 error code",
+      "Bosch E24 drain code fix",
+      "clean Bosch dishwasher filter E24",
+      "Bosch dishwasher impeller cover check"
+    ]
+  },
+  {
+    "id": "frigidaire-washer-e11",
+    "brand": "Frigidaire",
+    "brandSlug": "frigidaire",
+    "appliance": "Washer",
+    "applianceSlug": "washer",
+    "code": "E11",
+    "title": "Frigidaire Washer E11 Error Code - Fill Time Too Long",
+    "description": "E11 code triggers when fill time exceeds standard limit during wash cycle.",
+    "symptoms": [
+      "Washer taking excessive time to fill",
+      "E11 error code displays",
+      "Cycle halts mid-fill"
+    ],
+    "possibleCauses": [
+      "Restricted supply taps",
+      "Clogged inlet screens",
+      "Faulty water valve",
+      "Leaking pressure hose"
+    ],
+    "solutions": [
+      "Verify home water supply valves are open completely.",
+      "Clean inlet screen filters on rear water connections.",
+      "Check water valve solenoids for proper resistance.",
+      "Replace water inlet valve if water flow remains poor."
+    ],
+    "partName": "Water Inlet Valve",
+    "seoKeywords": [
+      "Frigidaire washer E11 error code",
+      "Frigidaire E11 fill code fix",
+      "Frigidaire washer slow fill",
+      "Frigidaire water valve replacement"
+    ]
+  },
+  {
+    "id": "frigidaire-washer-e20",
+    "brand": "Frigidaire",
+    "brandSlug": "frigidaire",
+    "appliance": "Washer",
+    "applianceSlug": "washer",
+    "code": "E20",
+    "title": "Frigidaire Washer E20 Error Code - Drain Problem / Pump Fault",
+    "description": "E20 or E21 indicates the washer is taking too long to pump water out of the machine.",
+    "symptoms": [
+      "Water left in drum",
+      "E20 error code displayed",
+      "Spin cycle cancelled"
+    ],
+    "possibleCauses": [
+      "Blocked drain pump filter",
+      "Clogged drain hose",
+      "Defective drain pump motor",
+      "Faulty control board relay"
+    ],
+    "solutions": [
+      "Inspect lower drain filter trap for foreign objects or lint blockage.",
+      "Ensure drain hose is installed without kinks or restrictions.",
+      "Test drain pump winding with multimeter.",
+      "Replace drain pump motor assembly if defective."
+    ],
+    "partName": "Drain Pump Motor",
+    "seoKeywords": [
+      "Frigidaire washer E20 error code",
+      "Frigidaire washer E20 fix",
+      "Frigidaire washer not draining",
+      "Frigidaire drain pump replacement"
+    ]
+  },
+  {
+    "id": "maytag-washer-f5e2",
+    "brand": "Maytag",
+    "brandSlug": "maytag",
+    "appliance": "Washer",
+    "applianceSlug": "washer",
+    "code": "F5E2",
+    "title": "Maytag Washer F5E2 Error Code - Door Lock Switch Failure",
+    "description": "Maytag washer code F5E2 occurs when control board cannot verify the door lock switch position.",
+    "symptoms": [
+      "Lid lock light blinks",
+      "Washer will not start",
+      "F5E2 code shown on digital panel"
+    ],
+    "possibleCauses": [
+      "Broken lid strike",
+      "Defective door lock mechanism",
+      "Loose wiring harness",
+      "Control board fault"
+    ],
+    "solutions": [
+      "Perform hard power reset by disconnecting washer for 5 minutes.",
+      "Inspect lid latch strike for damage.",
+      "Check continuity of door lock switch.",
+      "Replace door lock latch assembly if switch fails continuity testing."
+    ],
+    "partName": "Door Lock Latch Assembly",
+    "seoKeywords": [
+      "Maytag washer F5E2 error code",
+      "Maytag lid lock light flashing",
+      "Maytag F5E2 code fix",
+      "Maytag door lock replacement"
+    ]
+  },
+  {
+    "id": "maytag-washer-sd",
+    "brand": "Maytag",
+    "brandSlug": "maytag",
+    "appliance": "Washer",
+    "applianceSlug": "washer",
+    "code": "SD",
+    "title": "Maytag Washer SD / Sud Error Code - Excessive Foam Detection",
+    "description": "SD or Sud code triggers when control board senses excessive suds in outer tub during cycle.",
+    "symptoms": [
+      "Extra rinse cycles added automatically",
+      "Sud or SD displays",
+      "Washer pauses mid cycle"
+    ],
+    "possibleCauses": [
+      "Using non-HE laundry detergent",
+      "Overdosing detergent volume",
+      "Clogged drain hose restriction"
+    ],
+    "solutions": [
+      "Allow suds to dissolve naturally; do not add extra soap.",
+      "Switch exclusively to High-Efficiency (HE) detergent formulas.",
+      "Reduce detergent dose by half for soft water or light loads.",
+      "Run clean washer cycle with affresh cleaner tab to clear residue."
+    ],
+    "partName": "Washing Machine Cleaner Tablets",
+    "seoKeywords": [
+      "Maytag washer SD error code",
+      "Maytag Sud code fix",
+      "excessive suds Maytag washer",
+      "how to clear Sud error Maytag"
+    ]
+  },
+  {
+    "id": "kitchenaid-dishwasher-he",
+    "brand": "KitchenAid",
+    "brandSlug": "kitchenaid",
+    "appliance": "Dishwasher",
+    "applianceSlug": "dishwasher",
+    "code": "HE",
+    "title": "KitchenAid Dishwasher HE Error Code - Heating Element Fault",
+    "description": "HE error code indicates the control board detects no temperature increase during heat cycle.",
+    "symptoms": [
+      "Dishes cold and wet at cycle end",
+      "HE error displayed",
+      "Long cycle times"
+    ],
+    "possibleCauses": [
+      "Blown heating element",
+      "Tripped high-limit thermostat switch",
+      "Defective control board relay"
+    ],
+    "solutions": [
+      "Unplug unit and check heating element element for cracks or corrosion.",
+      "Test heating element continuity with multimeter (approx 10-30 ohms).",
+      "Check high-limit thermostat switch for continuity.",
+      "Replace heating element if open circuit."
+    ],
+    "partName": "Heating Element Assembly",
+    "seoKeywords": [
+      "KitchenAid dishwasher HE error code",
+      "KitchenAid dishwasher HE code fix",
+      "KitchenAid heating element test",
+      "KitchenAid dishwasher not drying"
+    ]
+  },
+  {
+    "id": "kenmore-washer-f02",
+    "brand": "Kenmore",
+    "brandSlug": "kenmore",
+    "appliance": "Washer",
+    "applianceSlug": "washer",
+    "code": "F02",
+    "title": "Kenmore Washer F02 Error Code - Drain System Long Drain Time",
+    "description": "Kenmore F02 code indicates drain pump is taking longer than 8 minutes to empty wash water.",
+    "symptoms": [
+      "Standing water in wash drum",
+      "F02 code flashing",
+      "Washer stops before spin cycle"
+    ],
+    "possibleCauses": [
+      "Clogged drain pump filter",
+      "Blocked drain hose",
+      "Failed drain pump motor",
+      "Loose harness"
+    ],
+    "solutions": [
+      "Remove coin trap filter plug at bottom front and clear debris.",
+      "Ensure drain hose is elevated and free of severe kinks.",
+      "Test pump motor resistance with multimeter.",
+      "Replace drain pump motor if defective."
+    ],
+    "partName": "Drain Pump Motor Assembly",
+    "seoKeywords": [
+      "Kenmore washer F02 error code",
+      "Kenmore F02 code fix",
+      "Kenmore washer standing water",
+      "Kenmore drain pump replacement"
+    ]
   }
 ]
