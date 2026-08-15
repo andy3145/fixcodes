@@ -1,4 +1,3 @@
-import Metadata from 'next';
 import codesData from '@/data/codes.json';
 import SearchSection from '@/components/SearchSection';
 import Link from 'next/link';
@@ -89,9 +88,12 @@ export default function HomePage() {
                         <Link href="/" className="text-xl font-black text-slate-900 tracking-tight">
                             FixCode<span className="text-blue-600">DB</span>
                         </Link>
-                        <span className="text-xs font-semibold px-2.5 py-1 bg-blue-50 text-blue-700 rounded-full border border-blue-200">
-                            Open Appliance Database
-                        </span>
+                        <Link
+                            href="/#error-code-database"
+                            className="text-xs font-semibold px-3 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg border border-blue-600 transition-colors shadow-sm"
+                        >
+                            Find Your Error Code →
+                        </Link>
                     </div>
                 </header>
 
