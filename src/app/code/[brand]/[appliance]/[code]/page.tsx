@@ -13,7 +13,7 @@ interface CodeItem {
     part_number: string;
 }
 
-const items: CodeItem[] = codesData as CodeItem[];
+const items: CodeItem[] = codesData as unknown as CodeItem[];
 
 export async function generateStaticParams() {
     return items.map((item: CodeItem) => ({
