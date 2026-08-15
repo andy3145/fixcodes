@@ -74,7 +74,7 @@ export default async function ErrorCodePage({
 
                     <h2 className="text-xl font-bold mb-3 text-slate-900">Step-by-Step Diagnostic Check</h2>
                     <ol className="list-decimal pl-5 space-y-3 text-slate-700">
-                        {item.diagnostic_steps.map((step: string, idx: number) => (
+                        {(item.diagnostic_steps || (item as any).diagnosticSteps || []).map((step: string, idx: number) => (
                             <li key={idx} className="pl-1">{step}</li>
                         ))}
                     </ol>
