@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\public",
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\code",
+    "\\src\\app\\code\\[brand]",
+    "\\src\\app\\code\\[brand]\\[appliance]",
+    "\\src\\app\\code\\[brand]\\[appliance]\\[code]",
+    "\\src\\components",
+    "\\src\\data"
+  ],
+  "SelectedNode": "\\public\\sitemap.xml",
+  "PreviewInSolutionExplorer": false
+}

@@ -1,0 +1,98 @@
+[
+  {
+    "brand": "samsung",
+    "appliance": "dryer",
+    "code": "de",
+    "title": "Samsung Dryer dE Error Code — Door Error",
+    "description": "dE indicates that the dryer is not detecting the door as properly closed. A blocked latch, misalignment, wiring fault, or failed door switch can trigger the code.",
+    "root_cause": "The control depends on the door-switch circuit to confirm that the door is closed before operation. If the expected switch state is not detected, the dryer prevents or interrupts operation and reports dE.",
+    "diagnostic_steps": [
+      "Open and close the dryer door firmly and check for clothing caught in the seal.",
+      "Inspect the latch and strike for damage or misalignment.",
+      "With power disconnected, inspect the door-switch wiring and connector.",
+      "Test the door switch for proper continuity and replace it if it fails."
+    ],
+    "part_name": "Dryer Door Switch",
+    "part_number": "DC64-00828B"
+  },
+  {
+    "brand": "samsung",
+    "appliance": "dryer",
+    "code": "hc",
+    "title": "Samsung Dryer HC Error Code — High Temperature Heating Check",
+    "description": "HC indicates a high-temperature heating condition. Restricted airflow, a defective thermistor, heating-system fault, or another condition causing excessive heat can trigger the code.",
+    "root_cause": "The control monitors temperature through the dryer thermistor and compares the measured value with expected operating limits. Excessive temperature or an abnormal sensor signal causes the heating fault.",
+    "diagnostic_steps": [
+      "Clean the lint filter and inspect the entire exhaust path for restrictions.",
+      "Check the exterior vent hood and flexible duct for crushed or blocked sections.",
+      "Disconnect power and inspect the thermistor wiring.",
+      "If airflow is good, test the thermistor and heating components against the model's specifications."
+    ],
+    "part_name": "Dryer Thermistor",
+    "part_number": "DC32-00007A"
+  },
+  {
+    "brand": "maytag",
+    "appliance": "washer",
+    "code": "f5e2",
+    "title": "Maytag Washer F5E2 Error Code — Lid Lock Problem",
+    "description": "F5E2 indicates that the washer is having difficulty locking or confirming the lid-lock position. Obstructions, misalignment, wiring faults, or a failed lid-lock assembly can cause the code.",
+    "root_cause": "The control requires confirmation from the lid-lock circuit before continuing certain portions of the wash cycle. If the lock does not reach or maintain the expected state, the control records F5E2.",
+    "diagnostic_steps": [
+      "Remove any clothing or objects interfering with the lid.",
+      "Close the lid firmly and inspect the strike and lock opening for damage.",
+      "Disconnect power and inspect the lid-lock connector and harness.",
+      "If the mechanism does not reliably lock or unlock, test or replace the lid-lock assembly."
+    ],
+    "part_name": "Washer Lid Lock Assembly",
+    "part_number": "W11188327"
+  },
+  {
+    "brand": "maytag",
+    "appliance": "washer",
+    "code": "f5e3",
+    "title": "Maytag Washer F5E3 Error Code — Lid Unlock Problem",
+    "description": "F5E3 indicates that the washer has detected a lid-lock or lid-unlock fault. A jammed mechanism, damaged strike, wiring issue, or failed lock assembly can cause the condition.",
+    "root_cause": "The control monitors the lid-lock position switch and expects the mechanism to move to the commanded state. Failure to reach that state within the expected period generates the error.",
+    "diagnostic_steps": [
+      "Stop the cycle and allow the basket to come to a complete stop.",
+      "Inspect the lid area and lock for clothing, debris, or mechanical damage.",
+      "Disconnect power and inspect the lock wiring and connector.",
+      "If the lock repeatedly fails to unlock, test or replace the lid-lock assembly."
+    ],
+    "part_name": "Washer Lid Lock Assembly",
+    "part_number": "W11188327"
+  },
+  {
+    "brand": "maytag",
+    "appliance": "washer",
+    "code": "f9e1",
+    "title": "Maytag Washer F9E1 Error Code — Long Drain",
+    "description": "F9E1 means the washer is taking too long to drain. A restricted drain hose, blocked pump, or failing drain pump is a common cause.",
+    "root_cause": "The control monitors the water-level response during the drain stage and expects the tub to empty within a defined time. If the level does not decrease sufficiently, F9E1 is recorded.",
+    "diagnostic_steps": [
+      "Inspect the drain hose for kinks, restrictions, or incorrect installation.",
+      "Check the household drain or standpipe for blockage.",
+      "Inspect the drain pump area for debris and confirm the impeller can move.",
+      "If the drain path is clear and the pump does not drain correctly, test or replace the pump."
+    ],
+    "part_name": "Washer Drain Pump Assembly",
+    "part_number": "W11399437"
+  },
+  {
+    "brand": "maytag",
+    "appliance": "dryer",
+    "code": "f01",
+    "title": "Maytag Dryer F01 Error Code — Primary Control Failure",
+    "description": "F01 on applicable Maytag dryers indicates a primary electronic control fault. Power surges, damaged electronic components, or control-board communication problems can cause the error.",
+    "root_cause": "The main control is unable to complete its internal electronic functions or communicate correctly with the dryer system. The exact failure mechanism depends on the control-board design and model.",
+    "diagnostic_steps": [
+      "Disconnect the dryer from power for at least five minutes.",
+      "Restore power and verify whether the code returns immediately.",
+      "Inspect visible harness connectors for loose connections or damage.",
+      "If F01 returns, identify the exact model and match the control board to its model-specific parts diagram."
+    ],
+    "part_name": "Electronic Main Control Board",
+    "part_number": "W10111621"
+  }
+]
