@@ -11,6 +11,8 @@ interface CodeItem {
     diagnostic_steps: string[];
     part_name: string;
     part_number: string;
+    ebay_affiliate_url?: string;
+    affiliateDisclosure?: string;
 }
 
 const items: CodeItem[] = codesData as unknown as CodeItem[];
@@ -49,9 +51,12 @@ export default async function ErrorCodePage({
         );
     }
 
-    const amazonAffiliateUrl = `https://www.amazon.com/s?k=${encodeURIComponent(
-        `${item.brand} ${item.part_number}`
-    )}`;
+    // Each record contains its product-specific eBay Partner Network search URL.
+    // The fallback keeps future records monetized even if ebay_affiliate_url is omitted.
+    const ebaySearchQuery = `${item.brand} ${item.appliance} ${item.part_name} ${item.code} replacement part`;
+    const ebayAffiliateUrl =
+        item.ebay_affiliate_url ||
+        `https://www.ebay.com/sch/i.html?_nkw=${encodeURIComponent(ebaySearchQuery)}&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339190484&customid=fixcodedb&toolid=10001&mkevt=1`;
 
     return (
         <div className="min-h-screen bg-slate-50 flex flex-col justify-between font-sans text-slate-800">
@@ -87,14 +92,18 @@ export default async function ErrorCodePage({
                         <p className="text-sm text-slate-600">OEM Part #: <code className="bg-white px-2 py-0.5 rounded border">{item.part_number}</code></p>
                     </div>
                     <a
-                        href={amazonAffiliateUrl}
+                        href={ebayAffiliateUrl}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="w-full sm:w-auto text-center bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-6 py-3 rounded-lg transition-colors whitespace-nowrap shadow-sm"
                     >
-                        Buy Replacement Part →
+                        Find Replacement Part on eBay →
                     </a>
                 </div>
+
+                <p className="text-[11px] leading-relaxed text-slate-500 -mt-4 mb-8">
+                    {item.affiliateDisclosure || 'FixCodeDB may earn a commission from qualifying purchases made through affiliate links.'}
+                </p>
             </main>
 
             <footer className="bg-slate-100 border-t border-slate-200 py-8 px-4 mt-12 text-xs text-slate-500 text-center">
