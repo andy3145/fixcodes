@@ -33,7 +33,7 @@ export default function SearchSection({ codes }: { codes: CodeItem[] }) {
     });
 
     return (
-        <section className="w-full">
+        <section id="error-code-database" className="w-full scroll-mt-24">
             {/* Search Input Box */}
             <div className="relative max-w-2xl mx-auto mb-6">
                 <input
