@@ -52,7 +52,7 @@ export default function ModelNumberPage() {
                         <section className="rounded-2xl border border-emerald-200 bg-emerald-50 p-6">
                             <p className="text-xs font-black uppercase tracking-[0.14em] text-emerald-800">What to copy</p>
                             <h2 className="mt-2 text-xl font-black text-slate-950">Use every letter, number, dash, and suffix shown in the model field.</h2>
-                            <p className="mt-3 text-sm leading-6 text-slate-600">A small suffix can identify a different revision or regional version. When a FixCodeDB guide says “MODEL-SPECIFIC,” confirm compatibility using that complete value before purchase.</p>
+                            <p className="mt-3 text-sm leading-6 text-slate-600">A small suffix can identify a different revision or regional version. When a FixCodeDB guide says the exact OEM part number requires your model number, confirm compatibility using that complete value before purchase.</p>
                         </section>
 
                         <section className="rounded-2xl bg-slate-950 p-6 text-white">
