@@ -1,0 +1,76 @@
+{
+  "_comment": "Rules used ONLY by scripts/assign-symptoms.mjs to propose symptomSlugs. Runtime never reads this — src/data/codes.json carries the resolved symptomSlugs array per record. Matching is restricted to title, description, symptoms, possibleCauses and partName; rootCause and diagnosticSteps are excluded because a passing mention there ('not to be confused with a drain blockage') is not a topical association. Add ids to 'exclude' to override a bad automatic match, or to 'include' to force one.",
+  "matchFields": ["title", "description", "symptoms", "possibleCauses", "partName"],
+  "rules": [
+    {
+      "slug": "washer-not-draining",
+      "appliance": "Washer",
+      "terms": ["drain", "pump", "water remains", "not draining"],
+      "include": [],
+      "exclude": []
+    },
+    {
+      "slug": "washer-not-filling",
+      "appliance": "Washer",
+      "terms": ["fill", "inlet", "water supply", "low flow"],
+      "include": [],
+      "exclude": []
+    },
+    {
+      "slug": "washer-wont-spin",
+      "appliance": "Washer",
+      "terms": ["spin", "unbalanced", "off-balance", "motor speed", "drive motor", "suspension"],
+      "include": [],
+      "exclude": []
+    },
+    {
+      "slug": "dryer-not-heating",
+      "appliance": "Dryer",
+      "terms": ["heat", "heater", "heating element", "thermistor", "thermostat", "igniter", "ignition", "flame"],
+      "include": [],
+      "exclude": []
+    },
+    {
+      "slug": "dryer-taking-too-long",
+      "appliance": "Dryer",
+      "terms": ["airflow", "vent", "exhaust", "blockage", "restriction", "lint", "moisture sensor", "drying time"],
+      "include": [],
+      "exclude": []
+    },
+    {
+      "slug": "dishwasher-not-draining",
+      "appliance": "Dishwasher",
+      "terms": ["drain", "sump", "filter", "standing water"],
+      "include": [],
+      "exclude": []
+    },
+    {
+      "slug": "dishwasher-leaking",
+      "appliance": "Dishwasher",
+      "terms": ["leak", "overflow", "over-level", "float", "drip tray", "base pan", "gasket", "seal"],
+      "include": [],
+      "exclude": []
+    },
+    {
+      "slug": "refrigerator-not-cooling",
+      "appliance": "Refrigerator",
+      "terms": ["cooling", "not cold", "temperature", "evaporator fan", "condenser fan", "defrost", "compressor", "damper", "thermistor"],
+      "include": [],
+      "exclude": []
+    },
+    {
+      "slug": "refrigerator-ice-maker-not-working",
+      "appliance": "Refrigerator",
+      "terms": ["ice maker", "ice room", "ice pipe", "ice tray", "auger", "dispenser", "fill tube", "water filter", "water valve"],
+      "include": [],
+      "exclude": []
+    },
+    {
+      "slug": "oven-not-heating",
+      "appliance": "Oven / Range",
+      "terms": ["temperature sensor", "oven sensor", "heating element", "bake", "broil", "preheat", "not heating", "runaway temperature", "igniter"],
+      "include": [],
+      "exclude": []
+    }
+  ]
+}
