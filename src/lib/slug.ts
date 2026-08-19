@@ -1,14 +1,4 @@
-/**
- * URL helpers.
- *
- * The previous `.toLowerCase()` approach produced broken paths for any value
- * containing a space or slash, e.g.:
- *
- *   "Oven / Range" -> /code/ge/oven / range/f30   (extra path segment!)
- *   "3 Flashes"    -> /code/trane/furnace/3 flashes
- *
- * `slugify` normalises those into safe, stable, crawlable segments.
- */
+/** Convert display text into a stable, crawlable URL segment. */
 export function slugify(value: string): string {
     return value
         .normalize('NFKD')
@@ -23,12 +13,22 @@ export function codeHref(brand: string, appliance: string, code: string): string
     return `/code/${slugify(brand)}/${slugify(appliance)}/${slugify(code)}`;
 }
 
-/** Hub page for a brand, e.g. /brand/lg */
+/** Hub page for a brand, e.g. /brand/lg. */
 export function brandHref(brand: string): string {
     return `/brand/${slugify(brand)}`;
 }
 
-/** Hub page for a brand + appliance, e.g. /brand/lg/washer */
+/** Hub page for an appliance type, e.g. /appliance/washer. */
+export function applianceHref(appliance: string): string {
+    return `/appliance/${slugify(appliance)}`;
+}
+
+/** Hub page for a brand + appliance, e.g. /brand/lg/washer. */
 export function brandApplianceHref(brand: string, appliance: string): string {
     return `/brand/${slugify(brand)}/${slugify(appliance)}`;
+}
+
+/** Symptom landing page, e.g. /symptom/dishwasher-not-draining. */
+export function symptomHref(symptom: string): string {
+    return `/symptom/${slugify(symptom)}`;
 }
