@@ -23,11 +23,14 @@ Production checks:
 
 ```bash
 npm run audit:codes
+npm run audit:affiliates
 npm run typecheck
 npm run build
 ```
 
 `npm run audit:codes` verifies required fields, duplicate canonical code routes, legacy root-cause boilerplate, placeholder part numbers, and the size difference between the full server dataset and the client search projection.
+
+`npm run audit:affiliates` verifies that stored eBay affiliate URLs still contain the configured campaign ID, Custom ID, and tool ID. The same check runs automatically in GitHub Actions on pull requests and pushes to `main` and `agent/**` branches.
 
 ## Architecture notes
 
@@ -49,7 +52,7 @@ npm run build
 
 ## Monetization
 
-AdSense verification and `public/ads.txt` are preserved. Existing eBay affiliate URLs keep campaign ID `5339190484` and custom ID `fixcodedb`. Affiliate links are shown only where a replacement component is a reasonable next step and use `rel="sponsored noopener noreferrer"`.
+AdSense verification and `public/ads.txt` are preserved. eBay tracking parameters are centralized in `src/data/affiliate-config.json`; current links use campaign ID `5339190484`, custom ID `fixcodedb`, and tool ID `10001`. Affiliate links are shown only where a replacement component is a reasonable next step and use `rel="sponsored noopener noreferrer"`.
 
 ## Deployment
 
