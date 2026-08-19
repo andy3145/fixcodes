@@ -2,7 +2,7 @@
 
 import React, { useState, useDeferredValue, useMemo, useRef } from 'react';
 import Link from 'next/link';
-import { buildCodeHref } from '@/lib/slug';
+import { codeHref } from '@/lib/slug';
 
 interface CodeItem {
     brand: string;
@@ -185,7 +185,7 @@ export default function CodeExplorer({ items }: CodeExplorerProps) {
                     {visibleItems.map((item, idx) => (
                         <Link
                             key={idx}
-                            href={buildCodeHref(item)}
+                            href={codeHref(item.brand, item.appliance, item.code)}
                             className="bg-white border border-slate-200 rounded-xl p-5 hover:border-emerald-500 hover:shadow-sm transition-all group flex flex-col justify-between"
                         >
                             <div>
