@@ -25,6 +25,26 @@ export async function generateStaticParams() {
     }));
 }
 
+// 1. Added generateMetadata to fix the SEO / generic title bug
+export async function generateMetadata({
+    params,
+}: {
+    params: Promise<{ brand: string; appliance: string; code: string }>;
+}) {
+    const { brand, appliance, code } = await params;
+
+    const brandName = brand.charAt(0).toUpperCase() + brand.slice(1);
+    const applianceName = appliance.replace('-', ' ');
+
+    return {
+        title: `${brandName} ${applianceName} ${code} Error Code: Meaning, Causes & Fixes`,
+        description: `Is your ${brandName} ${applianceName} showing ${code}? Learn what this error code means, how to troubleshoot it step-by-step, and find the right replacement part.`,
+        alternates: {
+            canonical: `https://www.fixcodedb.com/code/${brand}/${appliance}/${code}`,
+        },
+    };
+}
+
 export default async function ErrorCodePage({
     params,
 }: {
@@ -51,8 +71,6 @@ export default async function ErrorCodePage({
         );
     }
 
-    // Each record contains its product-specific eBay Partner Network search URL.
-    // The fallback keeps future records monetized even if ebay_affiliate_url is omitted.
     const ebaySearchQuery = `${item.brand} ${item.appliance} ${item.part_name} ${item.code} replacement part`;
     const ebayAffiliateUrl =
         item.ebay_affiliate_url ||
