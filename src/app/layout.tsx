@@ -29,16 +29,6 @@ export const metadata: Metadata = {
     description: siteDescription,
     applicationName: 'FixCodeDB',
     category: 'Home repair',
-    keywords: [
-        'appliance error codes',
-        'appliance repair',
-        'washer error codes',
-        'dryer error codes',
-        'refrigerator error codes',
-        'dishwasher error codes',
-        'appliance diagnostics',
-        'OEM appliance parts',
-    ],
     alternates: {
         canonical: '/',
     },
