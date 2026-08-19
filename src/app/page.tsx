@@ -1,154 +1,101 @@
-import codesData from '@/data/codes.json';
-import SearchSection from '@/components/SearchSection';
+import type { Metadata } from 'next';
 import Link from 'next/link';
+import codesData from '@/data/codes.json';
+import CodeExplorer from '@/components/CodeExplorer';
+
+export const metadata: Metadata = {
+    title: 'FixCodeDB | Appliance Error Code Diagnostics & Repair Guides',
+    description: 'Search appliance error codes to find likely causes, step-by-step diagnostics, repair guidance, and compatible OEM replacement parts.',
+    metadataBase: new URL('https://www.fixcodedb.com'),
+    openGraph: {
+        title: 'FixCodeDB | Appliance Error Code Diagnostics',
+        description: 'Search appliance error codes to find likely causes, step-by-step diagnostics, repair guidance, and compatible OEM replacement parts.',
+        url: 'https://www.fixcodedb.com',
+        siteName: 'FixCodeDB',
+        type: 'website',
+    },
+};
 
 interface CodeItem {
     brand: string;
     appliance: string;
     code: string;
-    title: string;
-    description: string;
-    root_cause: string;
-    diagnostic_steps: string[];
-    part_name: string;
-    part_number: string;
+    title?: string;
+    description?: string;
 }
 
-const items: CodeItem[] = codesData as CodeItem[];
+export default function Home() {
+    const items = codesData as unknown as CodeItem[];
+    const brandCount = new Set(items.map((i) => i.brand)).size;
+    const applianceCount = new Set(items.map((i) => i.appliance)).size;
 
-// 1. Full SEO Metadata for Search Engines
-export const metadata = {
-    title: 'FixCodeDB — Free Appliance Error Code & Diagnostic Directory',
-    description:
-        'Instant DIY error code lookup for Samsung, Whirlpool, Maytag, LG, Bosch, and GE washers, dryers, and dishwashers. Find root causes and OEM replacement parts.',
-    keywords: [
-        'appliance error codes',
-        'washer error codes',
-        'dryer error codes',
-        'dishwasher error codes',
-        'Samsung error codes',
-        'Maytag error codes',
-        'Whirlpool error codes',
-        'appliance troubleshooting',
-    ],
-    openGraph: {
-        title: 'FixCodeDB — Free Appliance Error Code Directory',
-        description: 'Lookup appliance error codes, diagnostic checks, and OEM replacement parts instantly.',
-        type: 'website',
-    },
-};
-
-// 2. Structured Data (JSON-LD) for Google Rich Snippets
-const jsonLd = {
-    '@context': 'https://schema.org',
-    '@graph': [
-        {
-            '@type': 'WebSite',
-            'name': 'FixCodeDB',
-            'url': 'https://fixcodedb.com',
-            'description': 'Free database for household appliance error codes and troubleshooting guides.',
-        },
-        {
-            '@type': 'FAQPage',
-            'mainEntity': [
-                {
-                    '@type': 'Question',
-                    'name': 'How do I find my appliance error code on FixCodeDB?',
-                    'acceptedAnswer': {
-                        '@type': 'Answer',
-                        'text': 'Type your error code (e.g., F21, 4E, dE) or your appliance brand into the search bar at the top of FixCodeDB to view instant step-by-step diagnostic checks.',
-                    },
-                },
-                {
-                    '@type': 'Question',
-                    'name': 'Are appliance error code replacement parts universal?',
-                    'acceptedAnswer': {
-                        '@type': 'Answer',
-                        'text': 'Replacement parts vary by exact model family. FixCodeDB provides the primary OEM replacement part numbers commonly associated with each error code.',
-                    },
-                },
-            ],
-        },
-    ],
-};
-
-export default function HomePage() {
     return (
-        <>
-            {/* Inject Structured Data into <head> for Google */}
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-            />
-
-            <div className="min-h-screen bg-slate-50 flex flex-col justify-between font-sans text-slate-800">
+        <div className="min-h-screen bg-slate-50 text-slate-900 font-sans flex flex-col justify-between selection:bg-slate-900 selection:text-white">
+            <div>
                 {/* Header */}
-                <header className="bg-white border-b border-slate-200 py-4 px-6 shadow-sm">
-                    <div className="max-w-5xl mx-auto flex items-center justify-between">
-                        <Link href="/" className="text-xl font-black text-slate-900 tracking-tight">
-                            FixCode<span className="text-blue-600">DB</span>
+                <header className="border-b border-slate-200 bg-white/80 backdrop-blur-md sticky top-0 z-20">
+                    <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+                        <Link href="/" className="font-extrabold tracking-tight text-xl text-slate-900">
+                            FixCode<span className="text-emerald-600">DB</span>
                         </Link>
-                        <Link
-                            href="/#error-code-database"
-                            className="text-xs font-semibold px-3 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg border border-blue-600 transition-colors shadow-sm"
-                        >
-                            Find Your Error Code →
-                        </Link>
+                        <nav className="flex items-center gap-6 text-sm font-medium text-slate-600">
+                            <Link href="/safety" className="hover:text-slate-900 transition-colors">Safety</Link>
+                            <Link href="/privacy" className="hover:text-slate-900 transition-colors">Privacy</Link>
+                        </nav>
                     </div>
                 </header>
 
-                {/* Main Content */}
-                <main className="max-w-5xl mx-auto px-4 py-12 w-full">
-                    {/* Hero Section */}
-                    <section className="text-center max-w-3xl mx-auto mb-10">
-                        <h1 className="text-4xl sm:text-5xl font-black text-slate-900 tracking-tight leading-tight">
-                            Diagnose & Fix Any <br className="hidden sm:inline" />
-                            <span className="text-blue-600">Appliance Error Code</span>
-                        </h1>
-                        <p className="text-base sm:text-lg text-slate-600 mt-4">
-                            Free step-by-step diagnostic guides, root cause analysis, and OEM replacement part recommendations for major appliance brands.
-                        </p>
-                    </section>
+                {/* Hero */}
+                <section className="bg-white border-b border-slate-200 relative overflow-hidden">
+                    <div className="relative mx-auto max-w-6xl px-4 pb-14 pt-16 text-center sm:px-6 sm:pb-20 sm:pt-20">
+                        <div className="mx-auto max-w-3xl">
+                            <span className="mb-5 inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-emerald-50 px-3.5 py-1.5 text-xs font-semibold text-emerald-800 shadow-2xs">
+                                <span className="relative flex h-2 w-2">
+                                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-50" />
+                                    <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
+                                </span>
+                                Appliance Diagnostic Database
+                            </span>
 
-                    {/* Interactive Live Search & Code Cards */}
-                    <SearchSection codes={items} />
+                            <h1 className="text-balance text-4xl font-black tracking-tight text-slate-950 sm:text-5xl md:text-6xl">
+                                Decode the problem.{' '}
+                                <span className="block text-emerald-600">Fix it with confidence.</span>
+                            </h1>
 
-                    {/* SEO Content Section for Google Ranking */}
-                    <section className="mt-20 border-t border-slate-200 pt-12">
-                        <div className="max-w-3xl mx-auto space-y-8">
-                            <h2 className="text-2xl font-extrabold text-slate-900 text-center">
-                                Why Do Appliances Display Error Codes?
-                            </h2>
-                            <p className="text-sm text-slate-600 leading-relaxed">
-                                Modern household washers, dryers, dishwashers, and refrigerators rely on electronic control boards monitored by sensors. When a sensor detects an operational failure—such as a drain timeout, water supply failure, or door lock obstruction—it halts the cycle and displays an alphanumeric code on the digital display panel.
+                            <p className="mx-auto mt-6 max-w-2xl text-base leading-7 text-slate-600 sm:text-lg">
+                                Search appliance error codes to find likely causes, step-by-step diagnostics, repair guidance, and compatible OEM replacement parts.
                             </p>
 
-                            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-4">
-                                <div className="bg-white p-5 rounded-xl border border-slate-200">
-                                    <h3 className="font-bold text-slate-900 text-sm mb-1">1. Identify the Code</h3>
-                                    <p className="text-xs text-slate-500">Note the exact code displayed on your appliance screen or blinking light sequence.</p>
-                                </div>
-                                <div className="bg-white p-5 rounded-xl border border-slate-200">
-                                    <h3 className="font-bold text-slate-900 text-sm mb-1">2. Run Diagnostic Checks</h3>
-                                    <p className="text-xs text-slate-500">Follow our step-by-step troubleshooting checklist before buying expensive parts.</p>
-                                </div>
-                                <div className="bg-white p-5 rounded-xl border border-slate-200">
-                                    <h3 className="font-bold text-slate-900 text-sm mb-1">3. Source OEM Parts</h3>
-                                    <p className="text-xs text-slate-500">Order the exact OEM replacement part number associated with your specific error condition.</p>
-                                </div>
+                            <div className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-sm text-slate-500">
+                                <span><strong className="font-bold text-slate-900">{items.length.toLocaleString()}</strong> repair guides</span>
+                                <span aria-hidden="true" className="hidden h-1 w-1 rounded-full bg-slate-300 sm:block" />
+                                <span><strong className="font-bold text-slate-900">{brandCount}</strong> brands</span>
+                                <span aria-hidden="true" className="hidden h-1 w-1 rounded-full bg-slate-300 sm:block" />
+                                <span><strong className="font-bold text-slate-900">{applianceCount}</strong> appliance categories</span>
                             </div>
                         </div>
-                    </section>
-                </main>
-
-                {/* Footer */}
-                <footer className="bg-white border-t border-slate-200 py-8 px-4 mt-16 text-xs text-slate-500 text-center">
-                    <div className="max-w-5xl mx-auto space-y-2">
-                        <p className="font-bold text-slate-700">FixCodeDB — DIY Appliance Repair Database</p>
-                        <p>© {new Date().getFullYear()} FixCodeDB. All product names, logos, and brands are property of their respective owners.</p>
                     </div>
-                </footer>
+                </section>
+
+                {/* Interactive Search Component */}
+                <main className="mx-auto w-full max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
+                    <CodeExplorer items={items} />
+                </main>
             </div>
-        </>
+
+            {/* Footer */}
+            <footer className="border-t border-slate-200 bg-white">
+                <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-5 px-4 py-8 text-xs text-slate-500 sm:flex-row sm:px-6">
+                    <div>
+                        <p className="font-semibold text-slate-700">FixCode<span className="text-emerald-600">DB</span></p>
+                        <p className="mt-1">&copy; {new Date().getFullYear()} FixCodeDB. All rights reserved.</p>
+                    </div>
+                    <div className="flex gap-6 font-medium">
+                        <Link href="/safety" className="transition-colors hover:text-slate-950">Safety Disclaimer</Link>
+                        <Link href="/privacy" className="transition-colors hover:text-slate-950">Privacy Policy</Link>
+                    </div>
+                </div>
+            </footer>
+        </div>
     );
 }
