@@ -1,5 +1,6 @@
 import codesData from '@/data/codes.json';
 import Link from 'next/link';
+import FeedbackWidget from '@/components/FeedbackWidget';
 
 interface CodeItem {
     brand: string;
@@ -25,7 +26,6 @@ export async function generateStaticParams() {
     }));
 }
 
-// 1. Added generateMetadata to fix the SEO / generic title bug
 export async function generateMetadata({
     params,
 }: {
@@ -102,6 +102,8 @@ export default async function ErrorCodePage({
                         ))}
                     </ol>
                 </section>
+
+                <FeedbackWidget brand={item.brand} code={item.code} />
 
                 <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-8 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-sm">
                     <div>
