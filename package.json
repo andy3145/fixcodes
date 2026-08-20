@@ -10,6 +10,7 @@
     "typecheck": "tsc --noEmit",
     "audit:codes": "node scripts/audit-codes.mjs",
     "audit:strict": "node scripts/audit-codes.mjs --strict",
+    "audit:affiliates": "node scripts/audit-affiliates.mjs",
     "verify:sources": "node scripts/verify-sources.mjs",
     "symptoms:assign": "node scripts/assign-symptoms.mjs",
     "symptoms:preview": "node scripts/assign-symptoms.mjs --dry"

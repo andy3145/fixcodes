@@ -23,7 +23,7 @@ export default function AboutPage() {
 
             <section className="bg-slate-50 py-12 sm:py-16">
                 <div className="mx-auto grid max-w-5xl gap-4 px-4 sm:px-6 md:grid-cols-3">
-                    <Stat value={codes.length.toString()} label="Diagnostic guides" />
+                    <Stat value={codes.length.toString()} label="Error codes covered" />
                     <Stat value={getBrands().length.toString()} label="Supported brands" />
                     <Stat value="Independent" label="Manufacturer affiliation" />
                 </div>

@@ -1,3 +1,4 @@
+import affiliateConfig from '@/data/affiliate-config.json';
 import codesData from '@/data/codes.json';
 import { slugify } from '@/lib/slug';
 
@@ -127,7 +128,19 @@ export function getEbayAffiliateUrl(item: CodeItem): string {
     const query =
         item.partSearchQuery ||
         `${item.brand} ${item.appliance} ${getPartName(item)} ${item.code} replacement part`;
-    return `https://www.ebay.com/sch/i.html?_nkw=${encodeURIComponent(query)}&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339190484&customid=fixcodedb&toolid=10001&mkevt=1`;
+    const ebay = affiliateConfig.ebay;
+    const params = new URLSearchParams({
+        _nkw: query,
+        mkcid: ebay.mkcid,
+        mkrid: ebay.mkrid,
+        siteid: ebay.siteid,
+        campid: ebay.campaignId,
+        customid: ebay.customId,
+        toolid: ebay.toolId,
+        mkevt: ebay.mkevt,
+    });
+
+    return `https://www.ebay.com/sch/i.html?${params.toString()}`;
 }
 
 export function getBrands(): string[] {
